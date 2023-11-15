@@ -9,23 +9,33 @@ import SwiftUI
 
 struct ListView: View {
     var body: some View {
-        @State var item:  [String] = [
-            "Initial work",
-            "This is the second!",
-            "This is the third",
+        @State var items:  [ItemModel] = [
+            ItemModel(title: "Initial Activity!", isCompleted: false),
+            ItemModel(title: "Initial Activity!", isCompleted: true),
+            ItemModel(title: "Initial Activity!", isCompleted: false)
+            
         ]
         List{
-            ForEach(item, id: \.self) {
-                item in  ListRowView(title: item)
+            ForEach(items) {
+                item in ListRowView(item: item)
             }
-            .listStyle(PlainListStyle())
-          
+            .onDelete(perform: { indexSet in
+                items.remove(atOffsets: indexSet)
+            })
         }
         .navigationTitle("Daily Activities🗒️")
-        .navigationBarItems(leading: EditButton(),
+        .navigationBarItems(
                             trailing:
                                 NavigationLink("Add", destination: AddView())
-        )    }
+        )
+    }
+    
+    
+    func deleteItem(indexSet: IndexSet){
+       
+    }
+    
+    
 }
 
 struct ListView_Previews: PreviewProvider {
