@@ -8,20 +8,19 @@
 import SwiftUI
 
 struct ListView: View {
+    @State var items:  [ItemModel] = [
+        ItemModel(title: "Initial Activity!", isCompleted: false),
+        ItemModel(title: "Initial Activity!", isCompleted: true),
+        ItemModel(title: "Initial Activity!", isCompleted: false)
+        
+    ]
     var body: some View {
-        @State var items:  [ItemModel] = [
-            ItemModel(title: "Initial Activity!", isCompleted: false),
-            ItemModel(title: "Initial Activity!", isCompleted: true),
-            ItemModel(title: "Initial Activity!", isCompleted: false)
-            
-        ]
+       
         List{
             ForEach(items) {
                 item in ListRowView(item: item)
             }
-            .onDelete(perform: { indexSet in
-                items.remove(atOffsets: indexSet)
-            })
+            .onDelete(perform: deleteItem)
         }
         .navigationTitle("Daily Activities🗒️")
         .navigationBarItems(
@@ -32,7 +31,7 @@ struct ListView: View {
     
     
     func deleteItem(indexSet: IndexSet){
-       
+        items.remove(atOffsets: indexSet)
     }
     
     
