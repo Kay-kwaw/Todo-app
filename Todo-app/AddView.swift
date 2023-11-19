@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct AddView: View {
+    
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var listViewModel: ListViewModels
     @State var textFieldText: String = ""
+    
+    @State var alertTitle: String = ""
+    @State var showAlert: Bool = false
+    
     var body: some View {
         ScrollView{
             VStack {
@@ -34,17 +39,36 @@ struct AddView: View {
         )}
                    
         .navigationTitle("Add an item✒️")
+        .alert(isPresented: $showAlert, content: getAlert)
         
     }
     func saveButtonPressed () {
-        listViewModel.addItem(title: textFieldText) //Once the button is pressed we call on the listViewModel
-        presentationMode.wrappedValue.dismiss()
-        //This presentMode is an inbuilt function that nevigates back to the listviewmodel page.
-        //presentationMode property provides a way to control the presentation of views within a navigation stack or sheet.
-        
+        if textIsAppopriate() {
+            listViewModel.addItem(title: textFieldText) //Once the button is pressed we call on the listViewModel
+            presentationMode.wrappedValue.dismiss()
+            //This presentMode is an inbuilt function that nevigates back to the listviewmodel page.
+            //presentationMode property provides a way to control the presentation of views within a navigation stack or sheet.
+            
+        }
+       
     }
     //Now with this function we want to append the add item to the already listed listViewdate models once the hit button in onpressed
+    func textIsAppopriate () -> Bool{
+        if textFieldText.count <  3 {
+            alertTitle =  "Item must exceed three characters🙄"
+            showAlert.toggle()
+            return false
+        }
+        return true
+    }
+    
+    func getAlert () -> Alert {
+     return Alert(title: Text(alertTitle))
+    }
+    
+   
 }
+
 
 
 struct AddView_Previews: PreviewProvider{

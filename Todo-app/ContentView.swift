@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var navigateToAnotherScreen = false
+    @EnvironmentObject var listViewModel : ListViewModels
     var body: some View {
         NavigationView{
             VStack {            
@@ -48,7 +49,16 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-        .previewDevice("iphone 14")
+//#Preview {
+//    ContentView()
+//        .previewDevice("iphone 14")
+//        .environment(ListViewModel())
+//}
+struct ContentView_preview: PreviewProvider{
+    static var previews: some View{
+        NavigationView{
+            ContentView()
+        }
+        .environmentObject(ListViewModels())
+    }
 }
