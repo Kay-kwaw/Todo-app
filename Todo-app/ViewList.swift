@@ -41,7 +41,6 @@ struct ListView: View {
         items.move(fromOffsets: from, toOffset: to)
     }
     
-    
 }
 
 struct ListView_Previews: PreviewProvider {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE313CA22B0AA0B70090FC92 /* ListViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE313CA12B0AA0B70090FC92 /* ListViewModels.swift */; };
 		CE75A6D62B041B1B00DB5EFE /* ViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75A6D52B041B1B00DB5EFE /* ViewList.swift */; };
 		CE75A6D82B04212C00DB5EFE /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75A6D72B04212C00DB5EFE /* ListRowView.swift */; };
 		CE75A6DA2B04A8A300DB5EFE /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75A6D92B04A8A300DB5EFE /* AddView.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE313CA12B0AA0B70090FC92 /* ListViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModels.swift; sourceTree = "<group>"; };
 		CE75A6D52B041B1B00DB5EFE /* ViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewList.swift; sourceTree = "<group>"; };
 		CE75A6D72B04212C00DB5EFE /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		CE75A6D92B04A8A300DB5EFE /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE313CA02B0AA0840090FC92 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE313CA12B0AA0B70090FC92 /* ListViewModels.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		CE75A6DB2B04CD4100DB5EFE /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				CE80C14D2B03A6C900E3A5BA /* Todo_appApp.swift */,
+				CE313CA02B0AA0840090FC92 /* ViewModels */,
 				CE80C14F2B03A6C900E3A5BA /* ContentView.swift */,
 				CE75A6DB2B04CD4100DB5EFE /* Models */,
 				CE75A6D52B041B1B00DB5EFE /* ViewList.swift */,
@@ -283,6 +294,7 @@
 				CE75A6DA2B04A8A300DB5EFE /* AddView.swift in Sources */,
 				CE75A6D62B041B1B00DB5EFE /* ViewList.swift in Sources */,
 				CE75A6D82B04212C00DB5EFE /* ListRowView.swift in Sources */,
+				CE313CA22B0AA0B70090FC92 /* ListViewModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
