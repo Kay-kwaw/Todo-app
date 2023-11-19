@@ -8,20 +8,15 @@
 import SwiftUI
 
 struct ListView: View {
-    @State var items:  [ItemModel] = [
-        ItemModel(title: "Initial Activity!", isCompleted: false),
-        ItemModel(title: "Initial Activity!", isCompleted: true),
-        ItemModel(title: "Initial Activity!", isCompleted: false)
-        
-    ]
+    @EnvironmentObject var listViewModel : ListViewModels
     var body: some View {
        
         List{
-            ForEach(items) {
+            ForEach(listViewModel.items) {
                 item in ListRowView(item: item)
             }
-            .onDelete(perform: deleteItem)
-            .onMove(perform: moveItem)
+            .onDelete(perform: listViewModel.deleteItem)
+            .onMove(perform: listViewModel.moveItem)
         }
         .navigationTitle("Daily Activities🗒️")
         .navigationBarItems(
@@ -33,13 +28,7 @@ struct ListView: View {
     }
     
     
-    func deleteItem(indexSet: IndexSet){
-        items.remove(atOffsets: indexSet)
-    }
     
-    func moveItem(from: IndexSet, to: Int) {
-        items.move(fromOffsets: from, toOffset: to)
-    }
     
 }
 
@@ -49,6 +38,7 @@ struct ListView_Previews: PreviewProvider {
             ListView(
             )
         }
+        .environmentObject(ListViewModels())
     }
 }
 

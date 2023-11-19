@@ -16,6 +16,8 @@ struct Todo_appApp: App {
             NavigationView{
                 ContentView()
             }
+            .environmentObject(listViewModel)
+            //EnvironmentObject is a way to share data across views in your SwiftUI application. It allows you to pass an object down the view hierarchy, making it accessible to any view within that hierarchy without the need to explicitly pass it through each intermediate view.
         }
     }
 }
