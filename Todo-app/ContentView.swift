@@ -60,6 +60,7 @@ struct ContentView_preview: PreviewProvider{
         NavigationView{
             ContentView()
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .environmentObject(ListViewModels())
     }
 }
