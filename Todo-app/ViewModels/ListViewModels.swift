@@ -38,6 +38,22 @@ class ListViewModels: ObservableObject {
         items.append(newItem) //This items.append just add the newly created item to the itemarray which it the itemModel.
     }
     
+    func updateItem(item: ItemModel) {
+        
+//        if let index = items.firstIndex { (existingItem) -> Bool in
+//            return existingItem.id == item.id
+//        }{
+//
+//        }
+        
+        if let index = items.firstIndex(where: {$0.id == item.id}){
+            items[index] = ItemModel(title: item.title, isCompleted: !item.isCompleted)
+        } // here the $0 is equal or the same as the existingItem
+        
+        
+    }
+    //Now with this fucntion we use index to find the item in the itemModels, so basically we use indexing
+    
     
     
 }
