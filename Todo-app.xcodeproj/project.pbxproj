@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE313CA22B0AA0B70090FC92 /* ListViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE313CA12B0AA0B70090FC92 /* ListViewModels.swift */; };
+		CE6DC5682B0BF33D00CC0AA7 /* NoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DC5672B0BF33C00CC0AA7 /* NoItemView.swift */; };
 		CE75A6D62B041B1B00DB5EFE /* ViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75A6D52B041B1B00DB5EFE /* ViewList.swift */; };
 		CE75A6D82B04212C00DB5EFE /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75A6D72B04212C00DB5EFE /* ListRowView.swift */; };
 		CE75A6DA2B04A8A300DB5EFE /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75A6D92B04A8A300DB5EFE /* AddView.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		CE313CA12B0AA0B70090FC92 /* ListViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModels.swift; sourceTree = "<group>"; };
+		CE6DC5672B0BF33C00CC0AA7 /* NoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemView.swift; sourceTree = "<group>"; };
 		CE75A6D52B041B1B00DB5EFE /* ViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewList.swift; sourceTree = "<group>"; };
 		CE75A6D72B04212C00DB5EFE /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		CE75A6D92B04A8A300DB5EFE /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				CE80C14F2B03A6C900E3A5BA /* ContentView.swift */,
 				CE75A6DB2B04CD4100DB5EFE /* Models */,
 				CE75A6D52B041B1B00DB5EFE /* ViewList.swift */,
+				CE6DC5672B0BF33C00CC0AA7 /* NoItemView.swift */,
 				CE75A6D92B04A8A300DB5EFE /* AddView.swift */,
 				CE75A6D72B04212C00DB5EFE /* ListRowView.swift */,
 				CE80C1512B03A6CA00E3A5BA /* Assets.xcassets */,
@@ -290,6 +293,7 @@
 			files = (
 				CE75A6DD2B04CD6E00DB5EFE /* itemModel.swift in Sources */,
 				CE80C1502B03A6C900E3A5BA /* ContentView.swift in Sources */,
+				CE6DC5682B0BF33D00CC0AA7 /* NoItemView.swift in Sources */,
 				CE80C14E2B03A6C900E3A5BA /* Todo_appApp.swift in Sources */,
 				CE75A6DA2B04A8A300DB5EFE /* AddView.swift in Sources */,
 				CE75A6D62B041B1B00DB5EFE /* ViewList.swift in Sources */,
