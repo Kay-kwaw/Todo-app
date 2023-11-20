@@ -22,8 +22,13 @@ struct ItemModel: Identifiable {
         self.title = title
         self.isCompleted = isCompleted
     }
+    
+    func updateCompletion () -> ItemModel {
+        return ItemModel(id: id, title: title, isCompleted: !isCompleted)
+    }
+    
 }
 
 
-ItemModel(title: <#T##String#>, isCompleted: <#T##Bool#>)
-ItemModel(id: <#T##String#>, title: <#T##String#>, isCompleted: <#T##Bool#>)
+
+

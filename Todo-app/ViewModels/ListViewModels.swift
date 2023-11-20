@@ -47,7 +47,7 @@ class ListViewModels: ObservableObject {
 //        }
         
         if let index = items.firstIndex(where: {$0.id == item.id}){
-            items[index] = ItemModel(title: item.title, isCompleted: !item.isCompleted)
+            items[index] = item.updateCompletion()
         } // here the $0 is equal or the same as the existingItem
         
         
