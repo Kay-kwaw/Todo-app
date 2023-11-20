@@ -4,25 +4,32 @@
 //
 //  Created by kwaw-kumi on 19/11/2023.
 //
+// SwiftUI, you can use the @AppStorage property wrapper to easily work with UserDefaults. @AppStorage is a property wrapper that automatically reads from and writes to UserDefaults for you.
 
 import Foundation
  
 class ListViewModels: ObservableObject {
     //NB we cant use @State in classes instead we use at poblished
-    @Published var items: [ItemModel] = []
+    @Published var items: [ItemModel] = []{
+        didSet {
+            saveItems()
+        }
+    }
+    let itemsKey: String = "items_list"
     
     init () {
         getItems()
     }
     
     func getItems() {
-        let newItems =  [
-            ItemModel(title: "Initial Activity!", isCompleted: false),
-            ItemModel(title: "Initial Activity!", isCompleted: true),
-            ItemModel(title: "Initial Activity!", isCompleted: false)
-            
-        ]
-        items.append(contentsOf: newItems)
+         
+        guard
+            let data = UserDefaults.standard.data(forKey: itemsKey),
+            let savedItems = try? JSONDecoder().decode([ItemModel].self, from: data)
+        else { return }
+        self.items = savedItems
+        
+        
     }
     
     func deleteItem(indexSet: IndexSet){
@@ -54,6 +61,12 @@ class ListViewModels: ObservableObject {
     }
     //Now with this fucntion we use index to find the item in the itemModels, so basically we use indexing
     
+    
+    func saveItems () {
+        if let encodedData = try? JSONEncoder().encode(items) {
+            UserDefaults.standard.setValue(encodedData, forKey: itemsKey)
+        }
+    }
     
     
 }
