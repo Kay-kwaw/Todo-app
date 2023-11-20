@@ -13,19 +13,20 @@ struct ListView: View {
         ZStack {
             if listViewModel.items.isEmpty
             {
-                Text("No item")
-            }
-            List{
-                ForEach(listViewModel.items) {
-                    item in ListRowView(item: item)
-                        .onTapGesture {
-                            withAnimation(.linear) {
-                                listViewModel.updateItem(item: item)
+                NoItemView()
+            } else {
+                List{
+                    ForEach(listViewModel.items) {
+                        item in ListRowView(item: item)
+                            .onTapGesture {
+                                withAnimation(.linear) {
+                                    listViewModel.updateItem(item: item)
+                                }
                             }
-                        }
+                    }
+                    .onDelete(perform: listViewModel.deleteItem)
+                    .onMove(perform: listViewModel.moveItem)
                 }
-                .onDelete(perform: listViewModel.deleteItem)
-                .onMove(perform: listViewModel.moveItem)
             }
         }
         .navigationTitle("Daily Activities🗒️")
@@ -35,6 +36,7 @@ struct ListView: View {
                                 NavigationLink("Add", destination: AddView())
                             
         )
+        .navigationBarHidden(false)
     }
     
     

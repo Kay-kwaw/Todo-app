@@ -19,24 +19,29 @@ struct ContentView: View {
                         .foregroundColor(.orange)
                     Circle()
                         .frame(width: 30, height: 30)
-                        .foregroundColor(.black)
-                    .navigationTitle("Planoo")                }
+                        .foregroundColor(.accentColor)
+                    .navigationTitle("Planoo")
+                   
+                }
                 Text("Get ready to \nsupercharge \nyour goal- \nsetting and \nplanning with\nPlanoo! ")
                     .font(.largeTitle)
                     .padding(50)
-                Button(action: {
-                        }) {
-                            NavigationLink(destination: ListView()){
-                                Text("Get Started!               ")
-                                    .font(.headline)
-                                    .padding()
-                                    .background(Color.black)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(15)
-                            }
+                            NavigationLink(
+                                destination: ListView(), label: {
+                                    Text("Get Started!               ")
+                                        .font(.headline)
+                                        .padding()
+                                        .background(Color.accentColor)
+                                        .foregroundColor(.color1)
+                                        .cornerRadius(15)
+//
+                                }
+                                
+                               
+                            
                            
                             
-                        }
+                        )
                 
             }
             
@@ -49,11 +54,7 @@ struct ContentView: View {
     }
 }
 
-//#Preview {
-//    ContentView()
-//        .previewDevice("iphone 14")
-//        .environment(ListViewModel())
-//}
+
 struct ContentView_preview: PreviewProvider{
     static var previews: some View{
         NavigationView{

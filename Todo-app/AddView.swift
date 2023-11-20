@@ -31,8 +31,8 @@ struct AddView: View {
                     Text("SAVE!               ")
                         .font(.headline)
                         .padding()
-                        .background(Color.black)
-                        .foregroundColor(.white)
+                        .background(Color.accentColor)
+                        .foregroundColor(.color1)
                         .cornerRadius(15)
                 
             }
