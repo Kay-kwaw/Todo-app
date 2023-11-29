@@ -33,16 +33,37 @@ struct ListView: View {
         .navigationBarItems(
             leading: EditButton(),
                             trailing:
-                                NavigationLink("Add", destination: AddView())
+//                                NavigationLink("Add", destination: AddView())
                             
         )
-        .navigationBarHidden(false)
+        .toolbar {
+                            ToolbarItemGroup(placement: .bottomBar) {
+                                Spacer()
+                                
+                                Button(action: {
+                                    // Action for the button
+//                                    self.showAlert.toggle()
+                                }) {
+                                    Image(systemName: "plus")
+                                        NavigationLink()
+                                        Text("Add")
+                                }
+//                                .alert(isPresented: $showAlert) {
+//                                    Alert(title: Text("Alert"), message: Text("Button tapped!"), dismissButton: .default(Text("OK")))
+//                                }
+                                
+                                Spacer()
+                            }
+                        }
+                                    
+                                    
+        }
     }
     
     
     
     
-}
+
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View{

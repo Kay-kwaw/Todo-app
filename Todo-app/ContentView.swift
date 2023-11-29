@@ -12,7 +12,8 @@ struct ContentView: View {
     @EnvironmentObject var listViewModel : ListViewModels
     var body: some View {
         NavigationView{
-            VStack {            
+            VStack {   
+                
                 HStack{
                      Circle()
                         .frame(width: 30, height: 30)
@@ -36,6 +37,7 @@ struct ContentView: View {
                                         .cornerRadius(15)
 //
                                 }
+                                
                                 
                                
                             

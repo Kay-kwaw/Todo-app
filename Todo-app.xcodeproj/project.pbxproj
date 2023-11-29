@@ -20,6 +20,7 @@
 		CE80C15F2B03A6CA00E3A5BA /* Todo_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80C15E2B03A6CA00E3A5BA /* Todo_appTests.swift */; };
 		CE80C1692B03A6CA00E3A5BA /* Todo_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80C1682B03A6CA00E3A5BA /* Todo_appUITests.swift */; };
 		CE80C16B2B03A6CA00E3A5BA /* Todo_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80C16A2B03A6CA00E3A5BA /* Todo_appUITestsLaunchTests.swift */; };
+		CEDD4BF62B173C7F00619410 /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD4BF52B173C7F00619410 /* TestScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		CE80C1642B03A6CA00E3A5BA /* Todo-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Todo-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE80C1682B03A6CA00E3A5BA /* Todo_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_appUITests.swift; sourceTree = "<group>"; };
 		CE80C16A2B03A6CA00E3A5BA /* Todo_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEDD4BF52B173C7F00619410 /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				CE80C14D2B03A6C900E3A5BA /* Todo_appApp.swift */,
 				CE313CA02B0AA0840090FC92 /* ViewModels */,
 				CE80C14F2B03A6C900E3A5BA /* ContentView.swift */,
+				CEDD4BF52B173C7F00619410 /* TestScreen.swift */,
 				CE75A6DB2B04CD4100DB5EFE /* Models */,
 				CE75A6D52B041B1B00DB5EFE /* ViewList.swift */,
 				CE6DC5672B0BF33C00CC0AA7 /* NoItemView.swift */,
@@ -294,6 +297,7 @@
 				CE75A6DD2B04CD6E00DB5EFE /* itemModel.swift in Sources */,
 				CE80C1502B03A6C900E3A5BA /* ContentView.swift in Sources */,
 				CE6DC5682B0BF33D00CC0AA7 /* NoItemView.swift in Sources */,
+				CEDD4BF62B173C7F00619410 /* TestScreen.swift in Sources */,
 				CE80C14E2B03A6C900E3A5BA /* Todo_appApp.swift in Sources */,
 				CE75A6DA2B04A8A300DB5EFE /* AddView.swift in Sources */,
 				CE75A6D62B041B1B00DB5EFE /* ViewList.swift in Sources */,
