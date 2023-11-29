@@ -31,8 +31,8 @@ struct ListView: View {
         }
         .navigationTitle("Daily Activities🗒️")
         .navigationBarItems(
-            leading: EditButton(),
-                            trailing:
+//            leading: EditButton(),
+                            trailing:EditButton()
 //                                NavigationLink("Add", destination: AddView())
                             
         )
@@ -45,8 +45,7 @@ struct ListView: View {
 //                                    self.showAlert.toggle()
                                 }) {
                                     Image(systemName: "plus")
-                                        NavigationLink()
-                                        Text("Add")
+                                        NavigationLink("Add", destination: AddView())
                                 }
 //                                .alert(isPresented: $showAlert) {
 //                                    Alert(title: Text("Alert"), message: Text("Button tapped!"), dismissButton: .default(Text("OK")))
